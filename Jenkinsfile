@@ -5,14 +5,20 @@ pipeline{
         git
     }
     stages{
-        stage('build stage'){
+        stage('compile stage'){
             steps{
-            sh " echo build"
+            sh "mvn clean compile"
             }
         }
-        stage('another stage'){
+        stage('test stage'){
             steps{
-                sh "echo anotherstage"
+                sh "mvn test"
+            }
+
+        }
+        stage('deploy stage'){
+            steps{
+                sh "mvn deploy"
             }
         }
     }
