@@ -1,8 +1,8 @@
 pipeline{
     agent any
     tools{
-        maven "maven"
-        git
+        maven 'maven'
+        
     }
     stages{
         stage('compile stage'){
