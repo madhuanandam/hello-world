@@ -2,9 +2,11 @@ pipeline{
     agent any
     tools{
         maven 'M2_HOME'
+        git
         
     }
     stages{
+        
         stage('compile stage'){
             steps{
             sh "mvn clean compile"
