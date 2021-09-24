@@ -18,7 +18,7 @@ pipeline{
         }
         stage('deploy stage'){
             steps{
-                sh "echo deploy"
+                sh "echo madhu"
             }
         }
     }
