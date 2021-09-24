@@ -16,6 +16,11 @@ pipeline{
             }
 
         }
+        stage('Run maven_job_var_1'){
+            steps{
+                build job: 'maven_job_var_1'
+            }
+        }
         stage('install stage'){
             steps{
                 sh "mvn clean install package"
